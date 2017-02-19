@@ -10,10 +10,8 @@ RUN git clone https://github.com/dolicoli/guess-the-number-sinatra.git var/www \
 RUN apt-get update
 RUN cd /var/www  && bundle install
 
-RUN gem install sinatra
-RUN gem install sinatra-reloader
-RUN gem install puma
 	
 EXPOSE 3000
 WORKDIR /var/www
-CMD bundle exec puma -p 3000
+
+CMD bundle exec rackup -p 3000
