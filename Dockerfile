@@ -14,4 +14,4 @@ RUN cd /var/www  && bundle install
 EXPOSE 3000
 WORKDIR /var/www
 
-CMD bundle exec rackup -p 3000
+CMD bundle exec puma -p 3000
